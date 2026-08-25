@@ -10,59 +10,72 @@
   <header>
     <div class="logo">✈ SkyWay</div>
     <nav>
-      <a href="#flights">Flights</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#packages">Packages</a>
+      <a href="#flights" data-en="Flights" data-ar="الرحلات">Flights</a>
+      <a href="#destinations" data-en="Destinations" data-ar="الوجهات">Destinations</a>
+      <a href="#packages" data-en="Packages" data-ar="الباقات">Packages</a>
     </nav>
-    <button class="login">Sign in</button>
+    <div class="header-actions">
+      <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">العربية</button>
+      <button class="login" data-en="Sign in" data-ar="تسجيل الدخول">Sign in</button>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-text">
-        <p class="tag">TRAVEL SMART • FLY BETTER</p>
-        <h1>Where do you want to go?</h1>
-        <p>Search flights, discover destinations and find travel packages in one simple place.</p>
+        <p class="tag" data-en="TRAVEL SMART • FLY BETTER" data-ar="سافر بذكاء • طِر بشكل أفضل">TRAVEL SMART • FLY BETTER</p>
+        <h1 data-en="Where do you want to go?" data-ar="إلى أين تريد أن تسافر؟">Where do you want to go?</h1>
+        <p data-en="Search flights, discover destinations and find travel packages in one simple place."
+           data-ar="ابحث عن الرحلات، واكتشف الوجهات، واعثر على باقات السفر في مكان واحد.">
+           Search flights, discover destinations and find travel packages in one simple place.
+        </p>
       </div>
 
       <div class="search-card">
         <div class="tabs">
-          <button class="active">Round trip</button>
-          <button>One way</button>
+          <button class="active" data-en="Round trip" data-ar="ذهاب وعودة">Round trip</button>
+          <button data-en="One way" data-ar="ذهاب فقط">One way</button>
         </div>
         <div class="fields">
-          <label>From<input id="from" placeholder="Chennai (MAA)"></label>
-          <label>To<input id="to" placeholder="Dubai (DXB)"></label>
-          <label>Departure<input id="date" type="date"></label>
-          <label>Passengers<select id="passengers"><option>1 Adult</option><option>2 Adults</option><option>3 Adults</option><option>4 Adults</option></select></label>
+          <label data-en="From" data-ar="من">From<input id="from" placeholder="Chennai (MAA)"></label>
+          <label data-en="To" data-ar="إلى">To<input id="to" placeholder="Dubai (DXB)"></label>
+          <label data-en="Departure" data-ar="المغادرة"><input id="date" type="date"></label>
+          <label data-en="Passengers" data-ar="المسافرون">
+            <select id="passengers">
+              <option data-en="1 Adult" data-ar="شخص بالغ واحد">1 Adult</option>
+              <option data-en="2 Adults" data-ar="شخصان بالغان">2 Adults</option>
+              <option data-en="3 Adults" data-ar="3 بالغين">3 Adults</option>
+              <option data-en="4 Adults" data-ar="4 بالغين">4 Adults</option>
+            </select>
+          </label>
         </div>
-        <button class="search-btn" onclick="searchFlights()">Search Flights</button>
+        <button class="search-btn" onclick="searchFlights()" data-en="Search Flights" data-ar="البحث عن الرحلات">Search Flights</button>
         <p id="result"></p>
       </div>
     </section>
 
     <section id="flights" class="section">
       <div class="section-title">
-        <div><p class="tag">POPULAR ROUTES</p><h2>Flight ideas</h2></div>
-        <span>Demo data</span>
+        <div><p class="tag" data-en="POPULAR ROUTES" data-ar="الوجهات الشائعة">POPULAR ROUTES</p><h2 data-en="Flight ideas" data-ar="اقتراحات الرحلات">Flight ideas</h2></div>
+        <span data-en="Demo data" data-ar="بيانات تجريبية">Demo data</span>
       </div>
       <div class="cards">
         <article class="flight-card">
-          <div><b>MAA</b><small>Chennai</small></div>
+          <div><b>MAA</b><small data-en="Chennai" data-ar="تشيناي">Chennai</small></div>
           <div class="line">✈ ───────── ✈</div>
-          <div><b>DXB</b><small>Dubai</small></div>
+          <div><b>DXB</b><small data-en="Dubai" data-ar="دبي">Dubai</small></div>
           <strong>₹18,500</strong>
         </article>
         <article class="flight-card">
-          <div><b>MAA</b><small>Chennai</small></div>
+          <div><b>MAA</b><small data-en="Chennai" data-ar="تشيناي">Chennai</small></div>
           <div class="line">✈ ───────── ✈</div>
-          <div><b>SIN</b><small>Singapore</small></div>
+          <div><b>SIN</b><small data-en="Singapore" data-ar="سنغافورة">Singapore</small></div>
           <strong>₹22,900</strong>
         </article>
         <article class="flight-card">
-          <div><b>DEL</b><small>Delhi</small></div>
+          <div><b>DEL</b><small data-en="Delhi" data-ar="دلهي">Delhi</small></div>
           <div class="line">✈ ───────── ✈</div>
-          <div><b>LHR</b><small>London</small></div>
+          <div><b>LHR</b><small data-en="London" data-ar="لندن">London</small></div>
           <strong>₹46,000</strong>
         </article>
       </div>
@@ -70,27 +83,30 @@
 
     <section id="destinations" class="section">
       <div class="section-title">
-        <div><p class="tag">EXPLORE</p><h2>Popular destinations</h2></div>
+        <div><p class="tag" data-en="EXPLORE" data-ar="اكتشف">EXPLORE</p><h2 data-en="Popular destinations" data-ar="الوجهات السياحية الشائعة">Popular destinations</h2></div>
       </div>
       <div class="destinations">
-        <div class="destination"><div class="emoji">🏝️</div><h3>Maldives</h3><p>Beach escapes from ₹29,999</p></div>
-        <div class="destination"><div class="emoji">🏙️</div><h3>Dubai</h3><p>City breaks from ₹18,500</p></div>
-        <div class="destination"><div class="emoji">🗼</div><h3>Paris</h3><p>European trips from ₹52,000</p></div>
-        <div class="destination"><div class="emoji">🗾</div><h3>Tokyo</h3><p>Japan adventures from ₹48,000</p></div>
+        <div class="destination"><div class="emoji">🏝️</div><h3 data-en="Maldives" data-ar="المالديف">Maldives</h3><p data-en="Beach escapes from ₹29,999" data-ar="رحلات شاطئية تبدأ من ₹29,999">Beach escapes from ₹29,999</p></div>
+        <div class="destination"><div class="emoji">🏙️</div><h3 data-en="Dubai" data-ar="دبي">Dubai</h3><p data-en="City breaks from ₹18,500" data-ar="رحلات المدينة تبدأ من ₹18,500">City breaks from ₹18,500</p></div>
+        <div class="destination"><div class="emoji">🗼</div><h3 data-en="Paris" data-ar="باريس">Paris</h3><p data-en="European trips from ₹52,000" data-ar="رحلات أوروبية تبدأ من ₹52,000">European trips from ₹52,000</p></div>
+        <div class="destination"><div class="emoji">🗾</div><h3 data-en="Tokyo" data-ar="طوكيو">Tokyo</h3><p data-en="Japan adventures from ₹48,000" data-ar="مغامرات اليابان تبدأ من ₹48,000">Japan adventures from ₹48,000</p></div>
       </div>
     </section>
 
     <section id="packages" class="section package">
       <div>
-        <p class="tag">TRAVEL PACKAGES</p>
-        <h2>Build your next adventure</h2>
-        <p>Combine flights, hotels and activities. This demo can later be connected to a real booking API.</p>
+        <p class="tag" data-en="TRAVEL PACKAGES" data-ar="باقات السفر">TRAVEL PACKAGES</p>
+        <h2 data-en="Build your next adventure" data-ar="خطط لمغامرتك القادمة">Build your next adventure</h2>
+        <p data-en="Combine flights, hotels and activities. This demo can later be connected to a real booking API."
+           data-ar="اجمع بين الرحلات والفنادق والأنشطة. ويمكن لاحقاً ربط هذا الموقع بنظام حجز حقيقي.">
+           Combine flights, hotels and activities. This demo can later be connected to a real booking API.
+        </p>
       </div>
-      <button onclick="showPackage()">View packages</button>
+      <button onclick="showPackage()" data-en="View packages" data-ar="عرض الباقات">View packages</button>
     </section>
   </main>
 
-  <footer>© 2026 SkyWay Travel — Demo project</footer>
+  <footer data-en="© 2026 SkyWay Travel — Demo project" data-ar="© 2026 SkyWay Travel — مشروع تجريبي">© 2026 SkyWay Travel — Demo project</footer>
   <script src="script.js"></script>
 </body>
 </html>
