@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyWay Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">✈ SkyWay</div>
+    <nav>
+      <a href="#flights">Flights</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a>
+    </nav>
+    <button class="login">Sign in</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tag">TRAVEL SMART • FLY BETTER</p>
+        <h1>Where do you want to go?</h1>
+        <p>Search flights, discover destinations and find travel packages in one simple place.</p>
+      </div>
+
+      <div class="search-card">
+        <div class="tabs">
+          <button class="active">Round trip</button>
+          <button>One way</button>
+        </div>
+        <div class="fields">
+          <label>From<input id="from" placeholder="Chennai (MAA)"></label>
+          <label>To<input id="to" placeholder="Dubai (DXB)"></label>
+          <label>Departure<input id="date" type="date"></label>
+          <label>Passengers<select id="passengers"><option>1 Adult</option><option>2 Adults</option><option>3 Adults</option><option>4 Adults</option></select></label>
+        </div>
+        <button class="search-btn" onclick="searchFlights()">Search Flights</button>
+        <p id="result"></p>
+      </div>
+    </section>
+
+    <section id="flights" class="section">
+      <div class="section-title">
+        <div><p class="tag">POPULAR ROUTES</p><h2>Flight ideas</h2></div>
+        <span>Demo data</span>
+      </div>
+      <div class="cards">
+        <article class="flight-card">
+          <div><b>MAA</b><small>Chennai</small></div>
+          <div class="line">✈ ───────── ✈</div>
+          <div><b>DXB</b><small>Dubai</small></div>
+          <strong>₹18,500</strong>
+        </article>
+        <article class="flight-card">
+          <div><b>MAA</b><small>Chennai</small></div>
+          <div class="line">✈ ───────── ✈</div>
+          <div><b>SIN</b><small>Singapore</small></div>
+          <strong>₹22,900</strong>
+        </article>
+        <article class="flight-card">
+          <div><b>DEL</b><small>Delhi</small></div>
+          <div class="line">✈ ───────── ✈</div>
+          <div><b>LHR</b><small>London</small></div>
+          <strong>₹46,000</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="destinations" class="section">
+      <div class="section-title">
+        <div><p class="tag">EXPLORE</p><h2>Popular destinations</h2></div>
+      </div>
+      <div class="destinations">
+        <div class="destination"><div class="emoji">🏝️</div><h3>Maldives</h3><p>Beach escapes from ₹29,999</p></div>
+        <div class="destination"><div class="emoji">🏙️</div><h3>Dubai</h3><p>City breaks from ₹18,500</p></div>
+        <div class="destination"><div class="emoji">🗼</div><h3>Paris</h3><p>European trips from ₹52,000</p></div>
+        <div class="destination"><div class="emoji">🗾</div><h3>Tokyo</h3><p>Japan adventures from ₹48,000</p></div>
+      </div>
+    </section>
+
+    <section id="packages" class="section package">
+      <div>
+        <p class="tag">TRAVEL PACKAGES</p>
+        <h2>Build your next adventure</h2>
+        <p>Combine flights, hotels and activities. This demo can later be connected to a real booking API.</p>
+      </div>
+      <button onclick="showPackage()">View packages</button>
+    </section>
+  </main>
+
+  <footer>© 2026 SkyWay Travel — Demo project</footer>
+  <script src="script.js"></script>
+</body>
+</html>
